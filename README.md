@@ -1,154 +1,166 @@
 # 💜 RIZZLY — Your Personal AI Wingman
 
 <p align="center">
-  <b>Never Run Out of Rizz.</b>
-  <br/>
-  An AI-powered flirting and texting assistant that helps you generate smooth replies, understand conversations, and improve your texting game.
+  <strong>Never Run Out of Rizz.</strong><br />
+  An AI-powered texting assistant for natural replies, conversation ideas, and chat screenshot insights.
 </p>
 
 <p align="center">
-  <a href="https://rizz.rekaixp.cyou"><img src="https://img.shields.io/badge/🌐_Live_Preview-rizz.rekaixp.cyou-A855F7?style=for-the-badge" /></a>
-  <img src="https://img.shields.io/badge/Developer-Rekaixp-A855F7?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Powered%20By-OpenAI-412991?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Deployment-Vercel-black?style=for-the-badge" />
+  <a href="https://rizz.rekaixp.cyou"><img src="https://img.shields.io/badge/Live%20Preview-rizz.rekaixp.cyou-A855F7?style=for-the-badge" alt="Live preview" /></a>
+  <img src="https://img.shields.io/badge/Developer-Rekaixp-A855F7?style=for-the-badge" alt="Developer Rekaixp" />
+  <img src="https://img.shields.io/badge/AI-Groq-F55036?style=for-the-badge" alt="Groq AI" />
+  <img src="https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge" alt="Vercel" />
 </p>
 
 ## 🌐 Live Preview
 
-**Try RIZZLY:** https://rizz.rekaixp.cyou
+**Try RIZZLY:** [https://rizz.rekaixp.cyou](https://rizz.rekaixp.cyou)
 
-Experience AI-powered texting assistance directly in your browser. No registration required.
+RIZZLY does not require signup or login. Saved replies, history, and preferences are stored in the current browser using LocalStorage.
 
----
+## ✨ Features
 
-## ✨ About RIZZLY
+- **AI Rizz Generator** — Generate natural, playful, funny, sweet, or confident messages.
+- **Chat Screenshot Scanner** — Upload up to 3 chat screenshots for vision-based conversation analysis and reply ideas.
+- **AI Reply Assistant** — Paste a message and get several possible responses.
+- **Conversation Starters** — Get non-generic conversation openers.
+- **Rizz Translator** — Rewrite messages in different tones and languages.
+- **AI Wingman** — Get practical advice for a texting situation.
+- **Pickup Lines & Bios** — Generate lighthearted lines and profile bio ideas.
+- **Saved Replies & History** — Keep useful suggestions in the browser.
+- **No account required** — Open the site and use the tools.
 
-**RIZZLY** is a modern AI-powered texting assistant designed to make conversations easier, more natural, and more interesting.
+## 🧰 Tech Stack
 
-Whether you need a smooth reply, a funny comeback, a conversation starter, or help understanding a chat screenshot, RIZZLY has you covered.
+- React 18 + Vite
+- JavaScript
+- CSS
+- Express API
+- Groq Chat Completions API
+- Groq vision model for screenshot analysis
+- Vercel deployment
+- LocalStorage for browser-side saved data
 
-No registration. No complicated setup. Just open the website and start generating.
+## 🤖 Groq Models
 
-## 🚀 Features
+The default configuration uses:
 
-- 💬 **AI Rizz Generator** — Generate smooth, funny, cute, and romantic messages.
-- 📸 **Chat Screenshot Scanner** — Upload Instagram, WhatsApp, Discord, Snapchat, or other chat screenshots and receive contextual reply suggestions.
-- ✍️ **AI Reply Assistant** — Paste a message and get multiple reply ideas.
-- 🗣️ **Conversation Starters** — Generate interesting conversation openers.
-- 🔄 **Rizz Translator** — Transform ordinary messages into different texting styles.
-- 🤖 **AI Wingman** — Get personalized texting advice through AI chat.
-- 💘 **Pickup Line Generator** — Generate creative and funny pickup lines.
-- 📝 **Bio Generator** — Create unique social media and dating bios.
-- ⭐ **Saved Replies** — Save your favorite generated messages.
-- 📚 **Generation History** — Access previous generations.
-
-## 🎨 Design
-
-RIZZLY features a premium dark interface with:
-
-- Deep black backgrounds.
-- Electric purple accents.
-- Pink and blue gradients.
-- Glassmorphism UI.
-- Smooth animations.
-- Responsive layouts.
-- Modern typography.
-
-## 🛠️ Tech Stack
-
-| Technology | Purpose |
+| Purpose | Model |
 |---|---|
-| React | Frontend |
-| TypeScript | Type safety |
-| Tailwind CSS | Styling |
-| Framer Motion | Animations |
-| Node.js | Backend |
-| Express | API |
-| OpenAI API | AI generation and vision |
-| Vercel | Deployment |
-| LocalStorage | Local preferences and saved data |
+| Text tools | `openai/gpt-oss-20b` |
+| Screenshot scanner | `qwen/qwen3.8-27b` |
 
-## ⚙️ Installation
+Model access, availability, and free-tier limits are controlled by Groq and can change. Check the [Groq model documentation](https://console.groq.com/docs/models) and [Vision documentation](https://console.groq.com/docs/vision) if a model is unavailable.
 
-### 1. Clone the repository
+## 🚀 Run Locally
+
+### 1. Download or clone the repository
 
 ```bash
-git clone https://github.com/rredefined/rizzly.git
-```
-
-### 2. Enter the project directory
-
-```bash
+git clone https://github.com/YOUR_USERNAME/rizzly.git
 cd rizzly
 ```
 
-### 3. Install dependencies
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
-### 4. Configure environment variables
+### 3. Configure the environment
 
-Create a `.env` file in the project root.
+Copy `.env.example` to `.env` and add your own Groq API key.
+
+**Windows CMD:**
+
+```cmd
+copy .env.example .env
+```
+
+**PowerShell:**
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Edit `.env`:
 
 ```env
-OPENAI_API_KEY=your_openai_api_key
-OPENAI_MODEL=gpt-4.1-mini
+GROQ_API_KEY=gsk_your_real_key_here
+GROQ_MODEL=openai/gpt-oss-20b
+GROQ_VISION_MODEL=qwen/qwen3.8-27b
 PORT=8787
 ```
 
-Never commit your `.env` file or expose your API key publicly.
+Create/manage API keys in the [Groq Console](https://console.groq.com/keys). API usage is subject to the provider's current rate limits and account terms. A free tier, where offered, is not unlimited and may change.
 
-### 5. Start development
+### 4. Start the development servers
 
 ```bash
 npm run dev
 ```
 
-Open the local URL displayed in your terminal.
+Vite serves the frontend and proxies `/api` requests to the local Express server on port `8787`.
 
-## ☁️ Deploy on Vercel
+### 5. Production build
 
-1. Push your project to GitHub.
-2. Open [Vercel](https://vercel.com/).
-3. Import your RIZZLY repository.
-4. Configure the required environment variables.
-5. Deploy your project.
+```bash
+npm run build
+```
 
-## 🔐 Privacy & Security
+The Vite build is written to `public/` for Vercel deployment.
 
-- No mandatory user registration.
-- API keys remain server-side.
-- Chat screenshots should be handled privately.
-- Users can clear locally saved history.
-- Never commit secret credentials to GitHub.
+## ☁️ Deploy to Vercel
+
+1. Push the project to a GitHub repository.
+2. Import that repository in [Vercel](https://vercel.com/new).
+3. Keep the build command as `npm run build`.
+4. Set the output directory to `public` (also configured in `vercel.json`).
+5. Add these environment variables in **Project → Settings → Environment Variables**:
+
+   | Name | Value |
+   |---|---|
+   | `GROQ_API_KEY` | Your private Groq API key |
+   | `GROQ_MODEL` | `openai/gpt-oss-20b` |
+   | `GROQ_VISION_MODEL` | `qwen/qwen3.8-27b` |
+
+6. Redeploy after adding or changing environment variables.
+
+### Health check
+
+After deployment, visit:
+
+```text
+https://YOUR_DOMAIN/api/health
+```
+
+The response reports whether the server has a Groq key configured. It does **not** verify that the key is valid or that the selected models are enabled.
+
+## 🔐 Security & Privacy
+
+- Keep `GROQ_API_KEY` on the server. Never prefix it with `VITE_`.
+- Never commit `.env` to GitHub. `.gitignore` excludes it; commit `.env.example` instead.
+- Screenshot uploads are held in memory for the request and are not written to a project storage bucket by this app.
+- Only upload conversations you have permission to share. Avoid uploading sensitive personal information.
+- LocalStorage data stays in that browser profile and is not synced between devices.
+- The included in-memory rate limiter is a basic safeguard, not a distributed production abuse-prevention system.
 
 ## 📸 Screenshots
 
-Add screenshots of your RIZZLY interface here.
-
-Suggested screenshots:
-- Homepage
-- AI Dashboard
-- Rizz Generator
-- Chat Screenshot Scanner
-- AI Reply Assistant
+Add screenshots of the homepage, tool workspace, screenshot scanner, and saved replies here.
 
 ## 👨‍💻 Developer
 
-**Developed with care by Rekaixp.**
+**RIZZLY is developed by Rekaixp.**
 
-RIZZLY is an independent AI-powered project developed by Rekaixp.
+- Product: RIZZLY
+- Tagline: Never Run Out of Rizz.
+- Live preview: [rizz.rekaixp.cyou](https://rizz.rekaixp.cyou)
 
 ---
 
 <p align="center">
-  <b>RIZZLY</b>
-  <br/>
-  Never Run Out of Rizz.
-  <br/><br/>
-  Made by <b>Rekaixp</b> 💜
-  <br/><br/>
-  <a href="https://rizz.rekaixp.cyou">Visit RIZZLY</a>
+  <strong>RIZZLY</strong><br />
+  Never Run Out of Rizz.<br /><br />
+  Made with care by <strong>Rekaixp</strong> 💜
 </p>
