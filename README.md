@@ -7,11 +7,17 @@
 </p>
 
 <p align="center">
+  <a href="https://rizz.rekaixp.cyou"><img src="https://img.shields.io/badge/🌐_Live_Preview-rizz.rekaixp.cyou-A855F7?style=for-the-badge" /></a>
   <img src="https://img.shields.io/badge/Developer-Rekaixp-A855F7?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Powered%20By-OpenAI-412991?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Frontend-React-61DAFB?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Deployment-Vercel-black?style=for-the-badge" />
 </p>
+
+## 🌐 Live Preview
+
+**Try RIZZLY:** https://rizz.rekaixp.cyou
+
+Experience AI-powered texting assistance directly in your browser. No registration required.
 
 ---
 
@@ -67,7 +73,7 @@ RIZZLY features a premium dark interface with:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/rredefined/rizzly.git
+git clone https://github.com/YOUR_USERNAME/rizzly.git
 ```
 
 ### 2. Enter the project directory
@@ -110,8 +116,6 @@ Open the local URL displayed in your terminal.
 4. Configure the required environment variables.
 5. Deploy your project.
 
-Your RIZZLY website will be available through your Vercel domain.
-
 ## 🔐 Privacy & Security
 
 - No mandatory user registration.
@@ -145,4 +149,6 @@ RIZZLY is an independent AI-powered project developed by Rekaixp.
   Never Run Out of Rizz.
   <br/><br/>
   Made by <b>Rekaixp</b> 💜
+  <br/><br/>
+  <a href="https://rizz.rekaixp.cyou">Visit RIZZLY</a>
 </p>
