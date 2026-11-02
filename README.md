@@ -73,7 +73,7 @@ RIZZLY features a premium dark interface with:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/rizzly.git
+git clone https://github.com/rredefined/rizzly.git
 ```
 
 ### 2. Enter the project directory
