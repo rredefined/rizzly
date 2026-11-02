@@ -57,7 +57,7 @@ Model access, availability, and free-tier limits are controlled by Groq and can 
 ### 1. Download or clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/rizzly.git
+git clone https://github.com/rredefined/rizzly.git
 cd rizzly
 ```
 
